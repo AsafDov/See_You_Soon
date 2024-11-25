@@ -72,7 +72,7 @@ def updateUser(request, username):
     
     if serializer.is_valid():
         serializer.save()
-    return Response(f"User {username} Updated to {request.data["username"]}")
+    return Response(f"User {username} Updated to {request.data['username']}")
 
 @api_view(['DELETE'])
 def deleteUser(request, username):
