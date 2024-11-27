@@ -36,6 +36,7 @@ def home(request):
 
 def userPage(request, username):
     context = {}
+    print(f"username : {username}")
     user = User.objects.get(username=username)
     friends = Friend.objects.filter(username=user)
 

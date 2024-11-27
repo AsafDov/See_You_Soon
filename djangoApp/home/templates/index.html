@@ -23,7 +23,7 @@
             </tr>
             {% for user in users%}
                 <tr>
-                    <td onclick="location.href='http://localhost:8000/{{user.username}}';" class = "text-center username-cell" >
+                    <td onclick="location.href='{% url "userHome" username=user.username %}';" class = "text-center username-cell" >
                         {{user.username}}
                     </td>
                     <td>

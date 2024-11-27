@@ -22,8 +22,8 @@
                 {%  if title == "Home" %}
                   <li class="nav-item"><a href="#" class="nav-link">Add User</a></li>
                 {% else %}  
-                  <li class="nav-item"><a href="http://localhost:8000/{{user.username}}/" class="nav-link active" aria-current="page">Home</a></li>
-                  <li class="nav-item"><a href="http://localhost:8000/{{user.username}}/addFriend" class="nav-link">Add Friend</a></li>
+                  <li class="nav-item"><a href="{% url "userHome" username=user.username %}" class="nav-link active" aria-current="page">Home</a></li>
+                  <li class="nav-item"><a href="{% url "addFriend" username=user.username %}" class="nav-link">Add Friend</a></li>
                 {% endif %}
                 {% comment %} <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
