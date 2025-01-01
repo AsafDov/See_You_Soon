@@ -31,13 +31,12 @@ class MeetingForm(forms.ModelForm):
 
 	friend = forms.ModelChoiceField(
 		queryset=Friend.objects.none(),  # Default to an empty queryset
-		empty_label="Add a meeting with",
+		empty_label="NewMeet",
 		widget=forms.Select(attrs={'class': 'form-control'}))  # Optional styling)
 
 
 	date = forms.DateField(label="Create new", widget=forms.DateInput(attrs={
 		"type" : "date",
-		'placeholder': 'When did you meet?',  # Grayed-out text
 		'class': 'form-control'
 	}))
 	def __init__(self, *args, **kwargs):
@@ -52,6 +51,7 @@ class MeetingForm(forms.ModelForm):
 	class Meta:
 		model = Meeting
 		fields = ["friend","date"]
+
 
 class FriendForm(forms.ModelForm):
 	name = forms.CharField(label="Create new friend", max_length=100, widget=forms.TextInput(attrs={

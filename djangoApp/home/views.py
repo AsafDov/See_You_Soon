@@ -131,6 +131,7 @@ def addFriendPage(request, username):
     context["friends"] = friends 
     context["user"] = user
     context["form"] = form
+    context["title"]="addFriend"
      
     return render(request, "addFriend.html",context=context)
 

@@ -1,4 +1,13 @@
+
+body{
+    background-color: #43b4d2;
+}
 td.username-cell {
     cursor: pointer;
+    
+}
 
+div.appLayout{
+    width: 400px;
+    height: 800px;
 }
