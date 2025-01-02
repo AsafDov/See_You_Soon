@@ -1,4 +1,6 @@
 
+html,body{height:100vh}
+
 body{
     background-color: #43b4d2;
 }
@@ -10,4 +12,5 @@ td.username-cell {
 div.appLayout{
     width: 410px;
     height: 100%;
+    min-height: 100%;
 }
