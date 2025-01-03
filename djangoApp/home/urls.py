@@ -19,7 +19,8 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.home, name="home"),
+    # path('', views.home, name="home"),
+    path('', views.userPage, name="home"), # delete when you want to create login page
     path('<str:username>/', views.userPage, name="userHome"),
     path('<str:username>/friends/', views.friendsPage, name="userFriends"),
     path('<str:username>/addFriend/', views.addFriendPage, name="addFriend")

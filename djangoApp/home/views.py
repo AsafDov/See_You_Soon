@@ -34,7 +34,7 @@ def home(request):
     context['title'] = "Home"
     return render(request, "index.html", context=context)
 
-def userPage(request, username):
+def userPage(request, username="Asaf"):
     context = {}
     print(f"username : {username}")
     user = User.objects.get(username=username)
