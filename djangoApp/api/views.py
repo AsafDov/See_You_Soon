@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from rest_framework.response import Response
+from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from home.models import Friend, User, Meeting
+import numpy as np
 from .serializers import FriendSerializer, MeetingSerializer,UserSerializer
 
 # Create your views here.
@@ -18,7 +20,8 @@ def apiOverview(request):
         "addMeeting":"/addMeeting/'<str:username>/<str:pk>/",
         "deleteMeeting":"/deleteMeeting/'<str:username>/<str:pk>/<str:pk>/",
         "lastMeetingDate":"/lastMeetingDate/'<str:username>/<str:pk>/",
-        "addFriendToUser":"<str:username>/addFriend",
+        "addFriendToUser":"<str:username>/addFriend/",
+        "getStatistics":"/getStats/<str:username>/<str:friend>/"
     }
     return Response(apiUrls)
 
@@ -28,6 +31,25 @@ def listAllFriends(request):
     friends = Friend.objects.all()
     serializer = FriendSerializer(friends, many=True)
     return Response(serializer.data)
+
+@api_view(['GET'])
+def getStatistics(request, username, friend):
+    user = User.objects.get(username=username)
+    friends = Friend.objects.get(username=user,name=friend)
+
+    meetings = Meeting.objects.filter(username=user, friend=friend) 
+    dayElapsedList = []
+    for meeting in meetings:
+        dayElapsedList.append(meeting.daysElapsed)
+    print(dayElapsedList)
+    avgDays = str(np.mean(dayElapsedList).astype(int))
+    maxDays = str(np.max(dayElapsedList))
+    print(dayElapsedList, avgDays, maxDays)   
+
+    return JsonResponse({
+                            "avg" : avgDays,
+                            "max": maxDays
+                        })
 
 @api_view(['GET'])
 def listUsers(request):

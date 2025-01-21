@@ -30,6 +30,7 @@ urlpatterns = [
     path('addFriend/', views.addFriend, name="addFriend"),
     path('listFriends/<str:username>/', views.listUserFriends, name="listFriends"),
     path('listMeetings/<str:username>/<str:friend>', views.listMeetings, name="listMeetings"),
+    path('getStats/<str:username>/<str:friend>/', views.getStatistics, name="friendStatistics"),
 ]
 
 addFriend = {

@@ -32,3 +32,5 @@ class Meeting(models.Model):
         return (now().date() - self.date).days
 
 Meeting.objects.order_by("date")
+
+

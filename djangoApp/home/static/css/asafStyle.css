@@ -14,3 +14,11 @@ div.appLayout{
     height: 100%;
     min-height: 100%;
 }
+
+div.row.friend-row{
+    cursor: pointer;
+}
+div.row.friend-row:hover{
+    background: #f5f5f5;
+    
+}

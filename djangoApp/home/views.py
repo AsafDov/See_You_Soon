@@ -62,7 +62,7 @@ def userPage(request, username="Asaf"):
                 meeting.friend.delete()
             else:
                 meeting.delete()
-
+    
     form = MeetingForm(user=user)
     context['meetings'] = Meeting.objects.filter(username=user)
     context['user'] = user
@@ -134,4 +134,3 @@ def addFriendPage(request, username):
     context["title"]="addFriend"
      
     return render(request, "addFriend.html",context=context)
-
