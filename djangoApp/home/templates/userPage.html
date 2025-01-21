@@ -24,8 +24,8 @@
     <div class="row px-2 pb-1">
         <div class="row friend-row hover mx-2">
             <div class="row fs-3", onclick="fetchStats(this,'{{meeting.username}}','{{meeting.friend.name}}')">
-                <div class="col-4 text-start">{{meeting.friend.name}}</div>
-                <div class="col-6">{{meeting.daysElapsed}}</div>
+                <div class="col-6 text-start">{{meeting.friend.name}}</div>
+                <div class="col-4">{{meeting.daysElapsed}}</div>
                 <div class="col-2">            
                     <button formnovalidate name="deleteMeeting" value="{{meeting.id}}" class="btn btn-danger"> 
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
