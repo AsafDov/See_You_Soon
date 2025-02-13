@@ -8,6 +8,6 @@ Now we have proof!
 
 Deployment instructions will be available when I feel like it.
 
-**TO DO - **
+** TO DO **
 1. Add log in page for different users
 2. Enable sorting of columns
