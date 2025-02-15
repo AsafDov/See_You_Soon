@@ -1,7 +1,7 @@
 ﻿# Friend-Tracker
 
 
-<img src="/assets/FriendTracker.png" width="400" />
+<img src="/assets/FriendTracker.png" width="30%" height="30%" />
 
 Do you ever find yourself wondering how long its been since seeing your friend, your mom, your wife?
 Here's a django web app to track the days past, frequency, and max days since meeting your friends.
