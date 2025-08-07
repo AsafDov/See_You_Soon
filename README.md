@@ -6,6 +6,9 @@
 
 **See You Soon** is a web application designed to help you keep track of your friendships. It logs the last time you met with your friends and provides insightful statistics, such as the average and maximum time between meetings. This project was developed using the Django framework, demonstrating a solid backend foundation with dynamic frontend rendering.
 
+## 🚀 Demo
+<img src="assets/FriendTracker_cropped.png" alt="Description of your image" width="500"/>
+
 ## ✨ Features
 
   * **Friend Management**: Easily add, view, and manage a list of your friends.
@@ -58,4 +61,5 @@ See_You_Soon/
 Asaf Dov - [GitHub Profile](https://www.google.com/search?q=https://github.com/AsafDov)
 
 Project Link: [https://github.com/AsafDov/See\_You\_Soon](https://github.com/AsafDov/See_You_Soon)
+
 
