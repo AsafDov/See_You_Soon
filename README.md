@@ -28,7 +28,7 @@
   * **HTML5**: For the structure of the web pages.
   * **CSS3**: For custom styling and layout.
   * **Django Template Language**: To dynamically generate HTML content and display data from the backend.
-  * **Bootstrap**: For styling the web app
+  * **Bootstrap**: For responsive UI components.
 
 ## 📂 Project Structure
 
@@ -58,3 +58,4 @@ See_You_Soon/
 Asaf Dov - [GitHub Profile](https://www.google.com/search?q=https://github.com/AsafDov)
 
 Project Link: [https://github.com/AsafDov/See\_You\_Soon](https://github.com/AsafDov/See_You_Soon)
+
